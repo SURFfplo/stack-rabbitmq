@@ -26,6 +26,10 @@ export STACK_VERSION=$VERSION
 export STACK_NETWORK=$NETWORK
 export STACK_PORT=$PORT
 
+# delete previous version
+# note: geen rollback!
+docker stack rm $STACK_SERVICE
+
 # prepare
 ./prepare.sh
 
